@@ -25,3 +25,16 @@ resource "aws_security_group" "test_instance_sg" {
   }
   tags = var.tags
 }
+
+resource "aws_db_instance" "default" {
+  allocated_storage    = 10
+  max_allocated_storage = 100
+  engine               = var.engine
+  engine_version       = var.engine_version
+  instance_class       = var.instance_class
+  name                 = var.name
+  username             = var.username
+  password             = var.password
+  parameter_group_name = var.parameter_group_name
+  skip_final_snapshot  = true
+}
