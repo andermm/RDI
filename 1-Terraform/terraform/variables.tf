@@ -60,6 +60,11 @@ variable "username" {
 variable "password" {
     type=string
     default= "foobarbaz"
+}
+
+variable "port" {
+    type=string
+    default= "3306"
 } 
 
 variable "parameter_group_name" {
