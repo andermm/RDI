@@ -40,11 +40,11 @@ resource "aws_db_instance" "default" {
   skip_final_snapshot  = true
 }
 
-resource "aws_security_group" "_" {
+resource "aws_security_group" "rds_sg" {
   name = "RDS-SG"
 
   description = "RDS (terraform-managed)"
-  vpc_id      = var.rds_vpc_id
+  vpc_id      = var.vpc_id
 
   # Only MySQL in
   ingress {

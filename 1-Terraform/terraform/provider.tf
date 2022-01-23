@@ -8,12 +8,12 @@ provider "aws" {
   secret_key                  = "mock_secret_key"
 }
 
-# terraform {
-#   backend "s3" {
-#     bucket         = "RDI"
-#     key            = "RDI/1-Terraform/terraform/terraform.tfstate"
-#     region         = "us-east-1"
-#     dynamodb_table = "terraform_rdi_locks"
-#     encrypt        = true
-#   }
-# }
+ terraform {
+   backend "s3" {
+     bucket         = "RDI"
+     key            = "RDI/1-Terraform/terraform/terraform.tfstate"
+     region         = "us-east-1"
+     dynamodb_table = "terraform_rdi_locks"
+     encrypt        = true
+   }
+ }

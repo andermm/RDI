@@ -26,3 +26,7 @@ The terraform would need its state storing and this code has not been added. Ple
 ## Question 3
 
 A new request to add a SQL database has come in. It would interact with the service currently being created here. Please suggest a resource that would fill this requirement and write the terraform to create this.
+
+### Answer
+
+1 - Added a new Security group and the AWS DB Instance.
